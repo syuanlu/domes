@@ -1,0 +1,59 @@
+let app = new Vue({
+    el:'#app',
+    data:{
+        itemList:[
+          {
+            id:'1',
+            itemName:'法式彩色馬卡龍/10顆裝',
+            imgUrl:'https://cdn.walkerland.com.tw/images/upload/daa9a48588e84170f6d67bd0a4d5bdd6e3453c80.jpg',
+            price:'500',
+            count:'1'
+          },
+          {
+            id:'2',
+            itemName:'老奶奶檸檬蛋糕/6吋',
+            imgUrl:'https://cdn01.pinkoi.com/product/DnnpBJ6X/0/800x0.jpg',
+            price:'600',
+            count:'1'
+          },
+          {
+            id:'3',
+            itemName:'日式輕乳酪蛋糕/6吋',
+            imgUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMBTtgPcLh7U0oEgiD71U5UW_ViLpoR-ChEg&usqp=CAU',
+            price:'300',
+            count:'1'
+          },
+          {
+            id:'4',
+            itemName:'夏日輕爽微酸檸檬塔/個',
+            imgUrl:'https://www.gomaji.com/blog/wp-content/uploads/2020/03/shutterstock_390854830-e1583823191128.jpg',
+            price:'120',
+            count:'1'
+          },
+          {
+            id:'5',
+            itemName:'經典原味濃郁生乳捲/捲',
+            imgUrl:'https://diz36nn4q02zr.cloudfront.net/webapi/imagesV3/Original/SalePage/7095226/0/637596885596600000?v=1',
+            price:'300',
+            count:'1'
+          },
+    ]
+    },
+    methods:{
+        handlePlus: function(item){
+            item.count++;
+        },
+        handleSub: function(item){
+            if(item.count>1){
+            item.count--;                
+            }
+        },
+        handledelete: function(index){
+            console.log(this);
+            this.itemList.splice(index,1);
+        }
+    },
+    computed:{
+
+    }
+})
