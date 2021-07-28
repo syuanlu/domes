@@ -35,7 +35,7 @@
                     </div>
                     <div class="amount">{{item.price * item.count}}</div>
                     <div class="edit">
-                        <button @click="handledelete(index)">刪除</button>
+                        <button @click="handledelete(index)">移除</button>
                     </div>
                 </div>
             </div>
